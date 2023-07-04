@@ -1,0 +1,317 @@
+:root {
+	--black: #000000;
+	--white: #ffffff;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	width: 100vw;
+	padding: 0;
+	margin: 0;
+	background-color: var(--black);
+}
+
+.container {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.white-diamond {
+	position: absolute;
+	aspect-ratio: 1/1;
+	/*height: 135px;*/
+	height: 0px;
+	rotate: 45deg;
+	background-color: var(--white);
+	animation: whitediamond 6s infinite;
+}
+
+.black-diamond {
+	position: absolute;
+	aspect-ratio: 1/1;
+	/*height: 125px;*/
+	height: 0px;
+	rotate: 45deg;
+	background-color: var(--black);
+	animation: blackdiamond 6s infinite;
+}
+
+.black-square {
+	position: absolute;
+	aspect-ratio: 1/1;
+	/*height: 155px;*/
+	height: 0px;
+	background-color: var(--black);
+	animation: blacksquare 6s infinite;
+}
+
+.white-square {
+	position: absolute;
+	aspect-ratio: 1/1;
+	/*height: 100px;*/
+	height: 130px;
+	background-color: var(--white);
+	animation: whitesquare 6s infinite, spin 3s infinite;
+}
+
+.black-diamond2 {
+	position: absolute;
+	aspect-ratio: 1/1;
+	/*height: 115px;*/
+	height: 75px;
+	rotate: 45deg;
+	background-color: var(--black);
+	animation: blackdiamond2 6s infinite, spin 3s infinite;
+}
+
+.white-diamond2 {
+	position: absolute;
+	aspect-ratio: 1/1;
+	height: 85px;
+	rotate: 45deg;
+	background-color: var(--white);
+	animation: whitediamond2 6s infinite;
+}
+
+.black-diamond3 {
+	position: absolute;
+	aspect-ratio: 1/1;
+	height: 75px;
+	rotate: 45deg;
+	background-color: var(--black);
+	animation: blackdiamond3 6s infinite;
+}
+
+.gradiant-diamond {
+	position: absolute;
+	aspect-ratio: 1/1;
+	height: 60px;
+	/*rotate: 45deg;*/
+	background: repeating-linear-gradient(
+		-45deg,
+		var(--black),
+		var(--black) 4px,
+		var(--white),
+		var(--white) 7px
+	);
+	animation: gradiantdiamond 6s infinite;
+}
+
+.black-diamond4 {
+	position: absolute;
+	aspect-ratio: 1/1;
+	height: 40px;
+	rotate: 45deg;
+	background-color: var(--black);
+	animation: blackdiamond4 6s infinite, spin 3s infinite;
+}
+
+.black-circle {
+	position: absolute;
+	top: -6px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	aspect-ratio: 1/1;
+	height: 13px;
+	border-radius: 50%;
+	background-color: var(--black);
+	/* animation: blackcircle 6s infinite; */
+}
+
+.black-circle::after {
+	content: "";
+	position: absolute;
+	aspect-ratio: 1/1;
+	height: 7px;
+	border-radius: 50%;
+	background-color: var(--white);
+	/* animation: blackcircleafter 6s infinite; */
+}
+
+@keyframes whitediamond {
+	0% {
+		height: 0px;
+	}
+	45% {
+		height: 135px;
+	}
+	55% {
+		height: 135px;
+	}
+	100% {
+		height: 0px;
+	}
+}
+@keyframes blackdiamond {
+	0% {
+		height: 0px;
+	}
+	45% {
+		height: 125px;
+	}
+	55% {
+		height: 125px;
+	}
+	100% {
+		height: 0px;
+	}
+}
+@keyframes blacksquare {
+	0% {
+		height: 0px;
+	}
+	45% {
+		height: 155px;
+	}
+	55% {
+		height: 155px;
+	}
+	100% {
+		height: 0px;
+	}
+}
+@keyframes whitesquare {
+	0% {
+		height: 0px;
+	}
+	45% {
+		height: 130px;
+	}
+	55% {
+		height: 130px;
+	}
+	100% {
+		height: 0px;
+	}
+}
+@keyframes blackdiamond2 {
+	0% {
+		height: 0px;
+	}
+	45% {
+		height: 115px;
+	}
+	55% {
+		height: 115px;
+	}
+	100% {
+		height: 0px;
+	}
+}
+@keyframes whitediamond2 {
+	0% {
+		height: 0px;
+	}
+	45% {
+		height: 85px;
+	}
+	55% {
+		height: 85px;
+	}
+	100% {
+		height: 0px;
+	}
+}
+@keyframes blackdiamond3 {
+	0% {
+		height: 0px;
+	}
+	45% {
+		height: 75px;
+	}
+	55% {
+		height: 75px;
+	}
+	100% {
+		height: 0px;
+	}
+}
+@keyframes gradiantdiamond {
+	0% {
+		height: 0px;
+	}
+	45% {
+		height: 60px;
+	}
+	55% {
+		height: 60px;
+	}
+	100% {
+		height: 0px;
+	}
+}
+@keyframes blackdiamond4 {
+	0% {
+		height: 0px;
+	}
+	45% {
+		height: 40px;
+	}
+	55% {
+		height: 40px;
+	}
+	100% {
+		height: 0px;
+	}
+}
+/* @keyframes blackcircle {
+	0% {
+		height: 0px;
+	}
+	45% {
+		height: 13px;
+	}
+	55% {
+		height: 13px;
+	}
+	100% {
+		height: 0px;
+	}
+} */
+/* @keyframes blackcircleafter {
+	0% {
+		height: 0px;
+	}
+	45% {
+		height: 7px;
+	}
+	55% {
+		height: 7px;
+	}
+	100% {
+		height: 0px;
+	}
+} */
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+/*@keyframes mymove {
+	0% {
+		top: 0px;
+	}
+	25% {
+		top: 200px;
+	}
+	50% {
+		top: 100px;
+	}
+	75% {
+		top: 200px;
+	}
+	100% {
+		top: 0px;
+	}
+}*/
